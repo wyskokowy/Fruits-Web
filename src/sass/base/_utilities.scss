@@ -1,0 +1,14 @@
+.margin-left--md {
+    margin-left: 6rem;
+
+    @include media(sm) {
+        margin-left: 2rem;
+    }
+}
+.margin-right--md {
+    margin-right: 6rem;
+
+    @include media(sm) {
+        margin-right: 2rem;
+    }
+}

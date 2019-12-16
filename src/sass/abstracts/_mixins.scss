@@ -1,0 +1,41 @@
+
+@mixin media($breakpoint) {
+    @if($breakpoint == xl) {
+        @media (max-width: 100em) { @content };
+    }
+    @if($breakpoint == l) {
+        @media (max-width: 75em) { @content };
+    }
+    @if($breakpoint == md) {
+        @media (max-width: 56.25em) { @content };
+    }
+    @if($breakpoint == sm) {
+        @media (max-width: 37.5em) { @content };
+    }
+    @if($breakpoint == xs) {
+        @media (max-width: 25em) { @content };
+    }
+}
+
+
+@mixin transition-5 {
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+@mixin transition-3 {
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+@mixin margin-around {
+    margin: 10vh;
+    @include media(xl) {
+        margin: 8vh;
+    }
+    @include media(l) {
+        margin: 4vh;
+    }
+    @include media(sm) {
+        margin: 0;
+    }
+}

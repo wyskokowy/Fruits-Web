@@ -1,0 +1,94 @@
+.btn {
+  &:link,
+  &:visited {
+    position: relative;
+    display: inline-block;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 2rem;
+
+    font-weight: 700;
+
+    border-radius: 50rem;
+    -webkit-box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: 0.2);
+            box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: 0.2);
+    @include transition-5;
+
+    @include media(sm) {
+      font-size: 1.4rem;
+        }
+  }
+
+  &:hover {
+    -webkit-box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: 0.3);
+            box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: 0.3);
+    -webkit-transform: translateY(-3px);
+            transform: translateY(-3px);
+
+    &::after {
+      -webkit-transform: scale(1.4);
+              transform: scale(1.4);
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    -webkit-box-shadow: 0 0.5rem 1rem rgba($color: #000000, $alpha: 0.3);
+            box-shadow: 0 0.5rem 1rem rgba($color: #000000, $alpha: 0.3);
+    -webkit-transform: translateY(-1px);
+            transform: translateY(-1px);
+  }
+
+  &-primary {
+    margin-top: 4rem;
+    padding: 2rem 3.5rem;
+    border: 2px solid $color-primary;
+    background: $color-primary;
+    color: $color-text-secondary;
+    @include media(sm) {
+      margin-top: 2rem;
+        }
+    &::after {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      border-radius: 50rem;
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: $color-primary;
+      @include transition-5;
+    }
+  }
+
+  &-secondary {
+    margin-top: 1rem;
+    padding: 1.5rem 2.5rem;
+    background: $color-text-secondary;
+    border: 2px solid $color-text-secondary;
+    color: $color-text-primary;
+    &::after {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      border-radius: 50rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: $color-text-secondary;
+      @include transition-5;
+      z-index: -1;
+    }
+  }
+
+  &--animated {
+    -webkit-animation: moveInBottom 0.5s ease-in-out 0.7s;
+            animation: moveInBottom 0.5s ease-in-out 0.7s;
+    -webkit-animation-fill-mode: backwards;
+            animation-fill-mode: backwards;
+  }
+}

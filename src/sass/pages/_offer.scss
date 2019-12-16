@@ -1,0 +1,5 @@
+.offer {
+  @include margin-around;
+  padding: 10vh 0;
+  color: $color-text-secondary;
+}

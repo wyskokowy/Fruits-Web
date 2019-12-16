@@ -1,0 +1,105 @@
+.header {
+    position: relative;
+    height: 80vh;
+    @include margin-around;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0.3))), url(../img/landing-bg.jpg);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(../img/landing-bg.jpg);
+    background-size: cover;
+    background-position: left;
+
+    &__logo-box {
+        position: absolute;
+        top: -5.5rem;
+        left: 1.6rem;
+
+        @include media(xl) {
+            top: -4rem;
+        }
+        @include media(l) {
+            top: 3rem;
+        }
+    }
+
+    &__logo {
+        text-transform: uppercase;
+        font-size: 2rem;
+        letter-spacing: 1rem;
+    }
+
+    &__text-box {
+        position: absolute;
+        text-align: center;
+        top: 60%;
+        left: 35%;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        @include media(xl) {
+            width: 80%;
+            left: 35%;
+        }
+        @include media(l) {
+            width: 100%;
+            left: 40%;
+        }
+        @include media(md) {
+            left: 50%;
+        }
+        @include media(xs) {
+            top: 60%;
+        }
+
+        
+    }
+
+    &__scroll-box {
+        position: absolute;
+        bottom: -5vh;
+        right: -3rem;
+        font-size: 1.2rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+
+        @include media(sm) {
+            bottom: -7vh;
+            right: 2rem;
+            font-size: 1rem;
+        }
+    }
+
+    &__scroll-text {
+        -webkit-writing-mode: vertical-rl;
+            -ms-writing-mode: tb-rl;
+                writing-mode: vertical-rl;
+        text-transform: uppercase;
+        letter-spacing: .5rem;
+        -webkit-animation: scroll-text 4s infinite;
+                animation: scroll-text 4s infinite;
+    }
+
+    &__scroll-bar {
+        height: 10rem;
+        width: 1px;
+        background: $color-secondary;
+        overflow: hidden;
+
+        &--sub {
+            height: 10rem;
+            width: 1px;
+            background: $color-text-primary;
+            -webkit-animation: scroll-bar 2s infinite;
+                    animation: scroll-bar 2s infinite;
+        }
+    }
+}
+

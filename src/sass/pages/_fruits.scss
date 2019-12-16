@@ -1,0 +1,58 @@
+.fruits {
+  @include margin-around;
+  padding-top: 5rem;
+
+  &__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+    height: 50vh;
+  }
+
+  &__fruit {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: none;
+
+    &--active {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+  }
+
+  &__img {
+    width: 20%;
+    @include media(md) {
+      width: 30%;
+    }
+    @include media(sm) {
+      width: 40%;
+    }
+  }
+}
+
+.arrow {
+  font-size: 4rem;
+  cursor: pointer;
+  @include transition-3;
+
+  &:hover {
+    color: $color-primary;
+  }
+}

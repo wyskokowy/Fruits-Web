@@ -1,0 +1,54 @@
+.footer {
+    background: $color-text-primary;
+    color: $color-text-secondary;
+    padding: 5rem;
+    font-size: 1.6rem; 
+
+    display: -webkit-box; 
+
+    display: -ms-flexbox; 
+
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+
+    @include media(sm) {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        line-height: 2;
+    }
+
+    &__social {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+
+        &-icon {
+            margin-left: 1rem;
+            font-size: 2rem;
+            cursor: pointer;
+
+
+            &:hover i{
+                color: $color-text-secondary;
+            }
+        }
+    }
+
+    &--green {
+        color: $color-primary;
+    }
+}
+
+i {
+    @include transition-3;
+}

@@ -1,0 +1,90 @@
+.form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 2rem;
+
+
+    &__element {
+        width: 70%;
+        margin-top: 2rem;
+        @include transition-3;
+        position: relative;
+    }
+
+    &__input,
+    &__text {
+        width: 100%;
+        padding: 1rem;
+        border: none;
+        border-bottom: .2rem solid $color-primary;
+        background: none;
+        color: $color-primary;
+        font-weight: 700;
+        letter-spacing: .1rem;
+        @include transition-3;
+
+        &:focus {
+            color: $color-text-secondary;
+            border-bottom: .2rem solid $color-text-secondary;
+        }
+    }
+
+    &__input[type=number]::-webkit-inner-spin-button,
+    &__input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+                appearance: none;
+        margin: 0;
+    }
+
+    input[type=number] {
+        -moz-appearance:textfield;
+    }
+
+    &__text {
+        resize: vertical;
+        border: .2rem solid $color-primary;
+        border-radius: 1rem;
+        margin-top: 2rem;
+
+        &:focus {
+            border: .2rem solid $color-text-secondary;
+        }
+    }
+
+    &__label {
+        display: block;
+        visibility: visible;
+        font-size: 1.2rem;
+        letter-spacing: .2rem;
+        position: absolute;
+        top: -1rem;
+        @include transition-5;
+    }
+    &__input:placeholder-shown + &__label {
+        visibility: hidden;
+        -webkit-transform: translate(.5rem, 1rem);
+                transform: translate(.5rem, 1rem);
+        opacity: 0;
+    }
+    &__input:focus + &__label {
+        color: $color-text-secondary;
+    }
+
+
+}
+
+.invalid {
+    color: red;
+    border-bottom-color: red;
+}

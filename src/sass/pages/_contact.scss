@@ -1,0 +1,35 @@
+.contact {
+    @include margin-around;
+    padding: 10vh;
+    background-image: url(../img/contact-min.jpg);
+    background-position: right;
+    background-origin: border-box;
+    background-attachment: fixed;
+
+    @include media(md) {
+        padding: 5vh;
+    }
+
+    &__container {
+        margin: 0 auto;
+        width: 70%;
+        padding: 2.5rem;
+        color: $color-primary;
+        background: rgba($color-text-primary, .96);
+        border: .4rem solid $color-primary;
+        border-radius: 3rem;
+        -webkit-box-shadow: 0 0 2rem $color-text-primary;
+                box-shadow: 0 0 2rem $color-text-primary;
+
+        @include media(l) {
+            width: 80%;
+        }
+        @include media(md) {
+            width: 90%;
+        }
+        @include media(sm) {
+            width: 95%;
+            padding: 1.5rem 0;
+        }
+    }
+}

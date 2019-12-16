@@ -1,0 +1,23 @@
+@import './abstracts/mixins';
+@import './abstracts/variables';
+
+@import './base/animations';
+@import './base/base';
+@import './base/typography';
+@import './base/utilities';
+
+@import './components/buttons';
+@import './components/cards';
+@import './components/form';
+@import './components/fruits-feature';
+
+@import './layout/footer';
+@import './layout/header';
+@import './layout/imgBetween';
+@import './layout/nav';
+
+@import './pages/about';
+@import './pages/contact';
+@import './pages/fruits';
+@import './pages/offer';
+@import './pages/whyFruits';
