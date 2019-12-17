@@ -2,6 +2,10 @@
   @include margin-around;
   padding-top: 5rem;
 
+  @include media(sm) {
+    overflow-x: hidden;
+  }
+
   &__container {
     display: -webkit-box;
     display: -ms-flexbox;

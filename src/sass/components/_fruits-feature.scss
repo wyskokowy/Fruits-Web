@@ -50,6 +50,10 @@
         -webkit-transform: translateY(7rem);
                 transform: translateY(7rem);
       }
+      @include media(sm) {
+        -webkit-transform: translateY(6rem);
+                transform: translateY(6rem);
+      }
     }
 
     &--back {
@@ -67,6 +71,14 @@
       @include media(l) {
         -webkit-transform: translateY(1rem);
                 transform: translateY(1rem);
+      }
+      @include media(md) {
+        -webkit-transform: translateY(3rem);
+                transform: translateY(3rem);
+      }
+      @include media(sm) {
+        -webkit-transform: translateY(2rem);
+                transform: translateY(2rem);
       }
     }
     &:hover &--front {

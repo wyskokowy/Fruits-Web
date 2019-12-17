@@ -38,6 +38,9 @@
             color: $color-text-secondary;
             border-bottom: .2rem solid $color-text-secondary;
         }
+        &::placeholder {
+            color: $color-primary;
+        }
     }
 
     &__input[type=number]::-webkit-inner-spin-button,
